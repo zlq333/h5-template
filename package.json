@@ -1,0 +1,48 @@
+{
+  "name": "h5-template",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "vue-tsc --noEmit && vite build --mode dev",
+    "build:test": "vue-tsc --noEmit && vite build --mode test",
+    "build": "vue-tsc --noEmit && vite build --mode prod",
+    "serve": "vite preview",
+    "remove": "rimraf node_modules package-lock.json",
+    "update": "ncu -u --target minor && npm run remove && npm i -f",
+    "tsc": "vue-tsc --noEmit",
+    "format": "prettier --config ./.prettierrc --write ./*.* ./src/**/*.js ./src/**/*.ts ./src/**/*.css ./src/**/*.vue"
+  },
+  "dependencies": {
+    "@fe/calc": "^1.0.4",
+    "@fe/directive": "^1.0.7",
+    "@fe/extend": "^1.0.3",
+    "@fe/filter": "^1.0.8",
+    "@fe/utils": "^1.0.4",
+    "@fe/validator": "^1.0.7",
+    "axios": "^0.27.2",
+    "jsencrypt": "^3.2.1",
+    "pinia": "^2.0.14",
+    "vant": "^3.4.9",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.36",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "postcss-aspect-ratio-mini": "^1.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.6.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-url": "^10.1.3",
+    "postcss-write-svg": "^3.0.1",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^2.1.2",
+    "vite-plugin-style-import": "^1.4.1",
+    "vue-tsc": "^0.34.16"
+  },
+  "description": "h5项目模板",
+  "author": "developer"
+}
